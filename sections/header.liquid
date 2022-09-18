@@ -464,7 +464,7 @@
                 {%- if link.links != blank -%}
                   <header-menu>
                     <details id="Details-HeaderMenu-{{ forloop.index }}">
-                      <summary class="header__menu-item list-menu__item link focus-inset">
+                      <summary  class="header__menu-item list-menu__item link focus-inset">
                         <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                         {% render 'icon-caret' %}
                       </summary>
@@ -499,7 +499,7 @@
                   </header-menu>
                 {%- else -%}
                   <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                    <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                    <span style="font-size: {{section.settings.font_size}}px;font-weight: {{section.settings.font-weight}}" {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                   </a>
                 {%- endif -%}
               </li>
@@ -624,7 +624,7 @@
                   </header-menu>
                 {%- else -%}
                   <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                    <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                    <span style="font-size: {{section.settings.font_size}}px;font-weight: {{section.settings.font-weight}}" {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                   </a>
                 {%- endif -%}
               </li>
@@ -964,6 +964,7 @@
       "default": "background-1",
       "label": "t:sections.all.colors.label"
     },
+
     {
       "type": "image_picker",
       "id": "logo",
@@ -979,6 +980,26 @@
     "label": "Font size",
     "default": 16
     },
+    {
+          "type": "select",
+          "id": "font-weight",
+          "label": "Font Weight",
+          "options": [
+            {
+              "value": "900",
+              "label": "900"
+            },
+            {
+              "value": "800",
+              "label": "800"
+            },
+            {
+              "value": "700",
+              "label": "700"
+            }
+          ],
+          "default": "900"
+        },
     {
       "type": "range",
       "id": "logo_width",
