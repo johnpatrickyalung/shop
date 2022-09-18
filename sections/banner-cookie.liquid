@@ -1,0 +1,93 @@
+<div style="background-image: url({{ section.settings.image_banner | img_url: 'master'}}); background-color: {{section.settings.color_scheme}};">
+    <div class="page-width banner-column">
+        <div class="">
+            <h1 class="">Oh My,Baked.</h1>
+        </div>
+
+        <div class="one-half-column-right">
+            <img src="img_girl.jpg" alt="Girl in a jacket" width="100%" height="auto">
+        </div>
+    </div>
+</div>
+
+
+
+
+<style>
+.banner-column{
+    display:flex;
+    width:100%;
+    align-items:center;
+    justify-content:space-between;
+}
+</style>
+
+
+{% schema %}
+{
+   "name": "Image Icon Blocks",
+  "class": "mystr-icon-blocks section-padding",
+ "settings": [
+        {
+            "type": "image_picker",
+            "id": "image_banner",
+            "label": "Image Icon"
+        },   {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        },
+        {
+          "value": "#F9E4AF",
+          "label": "Color"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    }
+ ],
+ "blocks": [
+        {
+            "type": "ImageIconText",
+            "name": "Image Icon With Text",
+            "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image Icon"
+        },  
+        {
+            "type": "text",
+            "id": "head",
+            "label": "Icon Text"
+        }
+            ]
+        }
+    ],
+"presets": [
+    {
+        "category": "Homepage",
+        "name":"Mystr Icon Blocks"
+    }
+    ]
+}
+{% endschema %}
