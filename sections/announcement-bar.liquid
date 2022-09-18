@@ -7,7 +7,7 @@
             <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
           {%- endif -%}
               <div class="page-width">
-                <p style="color: {{block.settings.color_title}};font-size: {{block.settings.font_size}}px; font-family: Inter; font-weight: {{block.settings.font-weight}}"class="announcement-bar__message {{ block.settings.text_alignment }} ">
+                <p style="color: {{block.settings.color_title}};font-size: {{block.settings.font_size}}px; font-weight: {{block.settings.font-weight}}"class="announcement-bar__message {{ block.settings.text_alignment }} ">
                   {{ block.settings.text | escape }}
                   {%- if block.settings.link != blank -%}
                     {% render 'icon-arrow' %}
