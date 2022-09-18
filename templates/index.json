@@ -24,6 +24,8 @@
       "type": "banner-cookie",
       "settings": {
         "image_banner": "shopify:\/\/shop_images\/Rectangle_2.png",
+        "image": "shopify:\/\/shop_images\/PSNICEDESK_1500x_5a18b3f8-d854-4593-9bbf-2ad5a3407e12.png",
+        "logo_width": 368,
         "color_scheme": "#F9E4AF"
       }
     }

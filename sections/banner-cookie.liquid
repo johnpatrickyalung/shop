@@ -5,7 +5,7 @@
         </div>
 
         <div class="one-half-column-right">
-            <img src="img_girl.jpg" alt="Girl in a jacket" width="100%" height="auto">
+            <img src="{{ section.settings.image | img_url: '95x95' }}"style="width: {{section.settings.logo_width}}px" class="img-icons" alt="" >
         </div>
     </div>
 </div>
@@ -32,7 +32,23 @@
             "type": "image_picker",
             "id": "image_banner",
             "label": "Image Icon"
-        },   {
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image Icon"
+        },
+        {
+            "type": "range",
+            "id": "logo_width",
+            "min": 184,
+            "max": 368,
+            "step": 8,
+            "default": 184,
+            "unit": "t:sections.header.settings.logo_width.unit",
+            "label": "t:sections.header.settings.logo_width.label"
+        },   
+        {
       "type": "select",
       "id": "color_scheme",
       "options": [
